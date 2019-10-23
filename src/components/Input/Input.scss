@@ -1,0 +1,14 @@
+@import "../../scss/utils";
+
+.input {
+	width: 100%;
+	border-radius: 15px;
+	border: $primary solid 1px;
+	padding: 0.5rem 1.5rem;
+	font-size: 1.1em;
+	background: $white;
+}
+
+.input:focus {
+	outline: none;
+}

@@ -1,0 +1,16 @@
+@import "../../scss/utils";
+
+.button {
+	border-radius: 15px;
+	border: none;
+	background: $filler;
+	padding: 0.5rem 1rem;
+	margin-right: 1rem;
+	font-size: 1.1em;
+	color: $white;
+	min-width: 100px;
+}
+
+.button:focus {
+	outline: none;
+}

@@ -2,17 +2,23 @@
 
 body {
 	margin: 0;
-	background: $white;
 	box-sizing: border-box;
 	font-family: $fontBody;
 
 	h1,
 	h2,
-	h3 {
+	h3,
+	h4,
+	h5,
+	button {
 		font-family: $fontTitle;
 	}
 }
 
 * {
 	box-sizing: inherit;
+}
+
+.w-100 {
+	width: 100% ;
 }

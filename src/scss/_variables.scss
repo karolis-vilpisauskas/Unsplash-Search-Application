@@ -1,17 +1,12 @@
-/* HSL */
-$white: hsla(180%, 14%, 97%, 1);
-$gray: hsla(171%, 25%, 80%, 1);
-$filler: hsla(181%, 54%, 66%, 1);
-$secondary: hsla(197%, 100%, 69%, 1);
-$primary: hsla(204%, 72%, 45%, 1);
-
 /* RGB */
-$white: rgba(247, 249, 249, 1);
-$gray: rgba(190, 216, 212, 1);
-$filler: rgba(120, 213, 215, 1);
-$secondary: rgba(99, 210, 255, 1);
-$primary: rgba(32, 129, 195, 1);
+$gray: rgba(210, 210, 210, 1);
+$filler: rgba(170, 170, 170, 1);
+$secondary: rgba(242, 242, 242, 1);
+$primary: rgba(8, 8, 8, 1);
+$danger: #bb2124;
+$success: #22bb33;
+$gradient: linear-gradient(120deg, $primary 0%, $filler 60%, $gray 100%);
 
 /* Fonts */
-$fontBody: 'Open Sans', sans-serif;
-$fontTitle: 'Montserrat', sans-serif;
+$fontBody: "Open Sans", sans-serif;
+$fontTitle: "Montserrat", sans-serif;

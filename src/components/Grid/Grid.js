@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { fetchImages } from "../../store/actions/imageActions";
 import "./Grid.scss";
 
+import Bar from "../ProgressBar";
 import GridItem from "../GridItem";
 
 const Grid = () => {
@@ -15,10 +16,22 @@ const Grid = () => {
 	}, [dispatch]);
 
 	const gridItems = images.map(image => {
-		return <GridItem key={image.id} caption={image.title} />;
+		return (
+			<GridItem
+				url={image.url}
+				key={image.id}
+				src={image.thumbnailUrl}
+				title={image.title}
+			/>
+		);
 	});
 
-	return gridItems;
+	return (
+		<div className='w-100'>
+			<Bar />
+			<div className='image-grid'>{gridItems}</div>
+		</div>
+	);
 };
 
 export default Grid;

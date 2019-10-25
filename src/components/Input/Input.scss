@@ -1,14 +1,19 @@
 @import "../../scss/utils";
 
-.input {
-	width: 100%;
-	border-radius: 15px;
-	border: $primary solid 1px;
-	padding: 0.5rem 1.5rem;
-	font-size: 1.1em;
-	background: $white;
+.input-outter {
+	width: calc( 100% - 1rem );
+	.input {
+		width: 100%;
+		border-radius: 15px;
+		border: $gray solid 2px;
+		padding: 0.5rem 1.5rem;
+		font-size: 1.1em;
+		background: white;
+		transition: all 0.3s ease-in-out;
+	}
 }
 
 .input:focus {
 	outline: none;
+	border-color: $primary;
 }

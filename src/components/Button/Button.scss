@@ -2,13 +2,28 @@
 
 .button {
 	border-radius: 15px;
-	border: none;
-	background: $filler;
+	border: 2px solid $primary;
+	background: $secondary;
 	padding: 0.5rem 1rem;
 	margin-right: 1rem;
 	font-size: 1.1em;
-	color: $white;
+	line-height: 1;
+	color: $primary;
 	min-width: 100px;
+	width: 50%;
+	cursor: pointer;
+	font-weight: bold;
+	transition: all 0.3s ease-in-out;
+}
+
+.button:last-child {
+	margin-right: 0;
+}
+
+.button:hover {
+	color: $secondary;
+	border: 2px solid $secondary;
+	background: $primary;
 }
 
 .button:focus {

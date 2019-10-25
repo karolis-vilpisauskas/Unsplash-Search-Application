@@ -1,0 +1,48 @@
+@import "../../scss/utils";
+
+.list-item {
+	background: $primary;
+	color: white;
+	border: $gray solid 2px;
+	padding: 5px 1.5rem;
+	padding-right: 2.5rem;
+	border-radius: 15px;
+	margin-bottom: 0.5em;
+	cursor: pointer;
+	transition: ease-in-out 0.3s all;
+	position: relative;
+	p {
+		margin: 0;
+	}
+	.delete-list-item {
+		background-color: $danger;
+		border-radius: 50%;
+		color: $secondary;
+		border: $secondary solid 2px;
+		height: 20px;
+		width: 20px;
+		font-weight: bold;
+		position: absolute;
+		right: 0.5em;
+		top: 50%;
+		transform: translateY(-50%);
+		z-index: 2;
+		cursor: pointer;
+		span {
+			position: absolute;
+    top: -2px;
+    left: 5px;
+    font-size: 0.75em;
+		}
+	}
+}
+
+.list-item:hover {
+	background: $secondary;
+	border: $primary solid 2px;
+	color: $primary;
+	.delete-list-item {
+		border-color: $primary;
+		color: $primary;
+	}
+}

@@ -1,12 +1,18 @@
-import { FETCH_IMAGES } from "../actions/types";
+import { FETCH_IMAGES, SEARCH_IMAGES } from "../actions/types";
 
 const initialState = {
-	items: []
+	items: [],
+	item: {}
 };
 
 export default function(state = initialState, action) {
 	switch (action.type) {
 		case FETCH_IMAGES:
+			return {
+				...state,
+				items: action.payload
+			};
+		case SEARCH_IMAGES:
 			return {
 				...state,
 				items: action.payload

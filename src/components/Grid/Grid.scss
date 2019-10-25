@@ -1,7 +1,12 @@
 .image-grid {
-    display: flex;
-    flex-wrap: wrap;
-    width: 100%;
-    min-height: 80vh;
-    justify-content: flex-start;
+	display: flex;
+	flex-wrap: wrap;
+	width: 100%;
+	min-height: 80vh;
+	justify-content: flex-start;
+	transition: ease-in-out all 0.3s;
+	h2 {
+		text-align: center;
+		width: 100%;
+	}
 }

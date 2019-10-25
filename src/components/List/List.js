@@ -9,7 +9,7 @@ const List = () => {
 
 
 	const queryItems = queries.map((query, i) => {
-		return <ListItem label={query} key={i} index={i}/>;
+		return <ListItem keyword={query} key={i} index={i}/>;
 	});
 
 	return (

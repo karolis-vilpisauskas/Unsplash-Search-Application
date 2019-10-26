@@ -4,7 +4,9 @@ import "./Header.scss";
 const Header = () => {
 	return (
 		<header className='header'>
-			<h3>Unsplash Image Search</h3>
+			<div className='container'>
+				<h1>Unsplash Image Search.</h1>
+			</div>
 		</header>
 	);
 };

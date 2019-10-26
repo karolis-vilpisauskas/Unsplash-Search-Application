@@ -1,12 +1,27 @@
 /* RGB */
-$gray: rgba(210, 210, 210, 1);
-$filler: rgba(170, 170, 170, 1);
-$secondary: rgba(242, 242, 242, 1);
-$primary: rgba(8, 8, 8, 1);
+$gray: rgb(194, 177, 177);
+$filler: #c2b9b0;
+$secondary: #c2c9cf;
+$primary: #e7717d;
+
 $danger: #bb2124;
 $success: #22bb33;
-$gradient: linear-gradient(120deg, $primary 0%, $filler 60%, $gray 100%);
+$dark: rgba(61, 52, 139, 1);
+$medium: rgba(118, 120, 237, 1);
+$yellow: rgba(247, 184, 1, 1);
+$orangelight: rgba(241, 135, 1, 1);
+$orangedark: rgba(243, 91, 4, 1);
+
+$gradient: linear-gradient(
+	120deg,
+	$dark 0%,
+	$medium 25%,
+	$yellow 50%,
+	$orangelight 75%,
+	$orangedark 100%
+);
 
 /* Fonts */
 $fontBody: "Open Sans", sans-serif;
 $fontTitle: "Montserrat", sans-serif;
+$fontLogo: "Lobster", cursive;

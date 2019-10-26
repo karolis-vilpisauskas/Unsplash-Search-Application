@@ -1,14 +1,17 @@
 @import "../../scss/utils";
 
 .header {
-    padding: 1rem 1.5rem ;
-    background: $primary; 
-    font-weight: bold;
-    color: white ;
-    text-align: center;
+	padding: 1rem 1.5rem;
+	background: transparent;
+	font-weight: bold;
+	color: $dark;
     min-height: 30px;
-    h3 {
-        margin: 0;
-        font-size: 1.5em;
+    .container {
+        justify-content: flex-start;
     }
+	h1 {
+		margin: 0;
+        font-size: 1.25em;
+        padding: 0 2rem;
+	}
 }

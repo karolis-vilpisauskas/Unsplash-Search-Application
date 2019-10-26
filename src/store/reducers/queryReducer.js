@@ -5,7 +5,7 @@ const initialState = {
 	item: ""
 };
 
-export default function(state = initialState, action) {
+export default (state = initialState, action) => {
 	switch (action.type) {
 		case SAVE_QUERY:
 			return {
@@ -27,4 +27,4 @@ export default function(state = initialState, action) {
 		default:
 			return state;
 	}
-}
+};

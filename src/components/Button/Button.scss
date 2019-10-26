@@ -1,20 +1,21 @@
 @import "../../scss/utils";
 
 .button {
-	border-radius: 15px;
-	border: 2px solid $primary;
-	background: $secondary;
+	border: 2px solid black;
+	background: transparent;
 	padding: 0.5rem 1rem;
 	margin-right: 1rem;
+	border-radius: 20px;
 	font-size: 1.1em;
 	line-height: 1;
-	color: $primary;
+	color: black;
 	min-width: 100px;
-	width: 50%;
+	width: 60%;
 	cursor: pointer;
 	font-weight: bold;
 	max-width: 180px;
 	transition: all 0.3s ease-in-out;
+	box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, 0.75);
 }
 
 .button:last-child {
@@ -22,11 +23,23 @@
 }
 
 .button:hover {
-	color: $secondary;
-	border: 2px solid $secondary;
-	background: $primary;
+	color: $orangelight;
+	background: white;
+	border: 2px solid $orangelight;
+}
+
+.button:last-child:hover {
+	color: $orangedark;
+	border: 2px solid $orangedark;
 }
 
 .button:focus {
 	outline: none;
+}
+
+@media only screen and (max-width: 768px) {
+	.button {
+		width: 100%;
+		max-width: none;
+	}
 }

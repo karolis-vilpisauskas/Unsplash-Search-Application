@@ -4,7 +4,7 @@ const initialState = {
 	active: false
 };
 
-export default function(state = initialState, action) {
+export default (state = initialState, action) => {
 	switch (action.type) {
 		case START_LOADER:
 			return {
@@ -19,4 +19,4 @@ export default function(state = initialState, action) {
 		default:
 			return state;
 	}
-}
+};

@@ -12,10 +12,11 @@ const Grid = () => {
 		grid: { opacity: 1, transform: "translateY(0)" },
 		bar: { opacity: 0, transform: "translateY(-20px)" }
 	});
-	const [counter, setCounter] = useState(1);
+
+	const page = useSelector(state => state.images.page);
 	const images = useSelector(state => state.images.items);
 	const loader = useSelector(state => state.loader.active);
-	const query  = useSelector(state => state.queries.item);
+	const query = useSelector(state => state.queries.item);
 	const dispatch = useDispatch();
 
 	useEffect(() => {
@@ -40,8 +41,7 @@ const Grid = () => {
 	}, [loader]);
 
 	const loadMore = () => {
-		dispatch(loadMoreImages(counter, query));
-		setCounter(counter + 1);
+		dispatch(loadMoreImages(page, query));
 	};
 
 	const ifImages = typeof images !== "undefined" && images.length > 0;
@@ -66,7 +66,7 @@ const Grid = () => {
 					<h2>Oops! No images have been found.</h2>
 				)}
 			</div>
-			{ifImages && images.length  >= 9 ? (
+			{ifImages && images.length >= 9 ? (
 				<Button label='Load More' type='button' action={loadMore} />
 			) : (
 				""

@@ -1,13 +1,13 @@
 import React from "react";
 import "./Input.scss";
 
-const Input = ({ type, setValue, name, placeholder, value }) => {
+const Input = ({ type, change, name, placeholder, value }) => {
 	const onChange = e => {
-		setValue(e);
+		change(e);
 	};
 
 	return (
-		<div className="input-outter">
+		<div className='input-outter'>
 			<input
 				className='input'
 				type={type}

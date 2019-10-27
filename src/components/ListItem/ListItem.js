@@ -1,25 +1,26 @@
 import React from "react";
 import { useDispatch } from "react-redux";
-import { deleteQuery, setQuery } from "../../store/actions/queryActions";
+import { deleteQuery, setQuery, toggleQueries } from "../../store/actions/queryActions";
 import { searchImages } from "../../store/actions/imageActions";
 import "./ListItem.scss";
 
 const ListItem = ({ keyword, index }) => {
 	const dispatch = useDispatch();
 
-	const delQuery = () => {
+	const dispatchDeleteQuery = () => {
 		dispatch(deleteQuery(index));
 	};
 
-	const getImages = () => {
+	const submitQuery = () => {
 		dispatch(setQuery(keyword));
+		dispatch(toggleQueries());
 		dispatch(searchImages(keyword));
 	};
 
 	return (
 		<div className='list-item'>
-			<div onClick={getImages}>{keyword}</div>
-			<div onClick={delQuery} className='delete-list-item'>
+			<div onClick={submitQuery}>{keyword}</div>
+			<div onClick={dispatchDeleteQuery} className='delete-list-item'>
 				<span>x</span>
 			</div>
 		</div>

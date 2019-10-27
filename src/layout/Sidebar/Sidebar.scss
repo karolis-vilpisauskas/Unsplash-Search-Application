@@ -4,14 +4,24 @@
 	flex-grow: 4;
 	padding: 1rem 0;
 	width: 30%;
-}
 
-@media only screen and (max-width: 768px) {
-	.sidebar {
+	@media only screen and (max-width: 768px) {
 		width: 100%;
 		padding: 0;
+		position: absolute;
+		top: -8rem;
+		left: 0;
+		right: 0;
+		margin: auto;
+		opacity: 0;
+		transform: translateY(-100%);
+		transition: ease-in-out 0.3s all;
 		.list-wrapper {
 			padding: 0 2rem;
+		}
+		&.is-active {
+			opacity: 1;
+			transform: translateY(0);
 		}
 	}
 }

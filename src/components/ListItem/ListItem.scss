@@ -8,7 +8,7 @@
 	padding-right: 2.5rem;
 	margin-bottom: 0.5em;
 	cursor: pointer;
-	border: $dark solid 2px ;
+	border: $dark solid 2px;
 	transition: ease-in-out 0.3s all;
 	position: relative;
 	p {
@@ -35,14 +35,14 @@
 			font-size: 0.75em;
 		}
 	}
-}
 
-.list-item:hover {
-	background: $dark;
-	color: white;
-	.delete-list-item {
-		border-color: white;
+	&:hover {
 		background: $dark;
 		color: white;
+		.delete-list-item {
+			border-color: white;
+			background: $dark;
+			color: white;
+		}
 	}
 }

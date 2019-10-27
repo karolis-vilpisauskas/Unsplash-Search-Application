@@ -1,7 +1,7 @@
 import React from "react";
 import "./ProgressBar.scss";
 
-const ProgressBar = ({style}) => {
+const ProgressBar = ({ style }) => {
 	return (
 		<div className='progressbar-wrapper' style={style}>
 			<div className='progressbar'>

@@ -8,7 +8,7 @@ const promiseTimeout = time => result =>
 export const fetchImages = () => dispatch => {
 	dispatch(startLoader());
 	axios
-		.get("/photos?page=1&per_page=9")
+		.get("/photos?page=1&per_page=12")
 		.then(promiseTimeout(800))
 		.then(res => {
 			dispatch({ type: FETCH_IMAGES, payload: res.data });
@@ -19,7 +19,7 @@ export const fetchImages = () => dispatch => {
 export const searchImages = keyword => dispatch => {
 	dispatch(startLoader());
 	axios
-		.get(`/search/photos?query=${keyword}&page=1&per_page=9`)
+		.get(`/search/photos?query=${keyword}&page=1&per_page=12`)
 		.then(promiseTimeout(800))
 		.then(res => {
 			dispatch({ type: SEARCH_IMAGES, payload: res.data.results });
@@ -30,13 +30,14 @@ export const searchImages = keyword => dispatch => {
 export const loadMoreImages = (counter, keyword) => dispatch => {
 	const path =
 		keyword === ""
-			? `/photos?page=${counter}&per_page=9`
-			: `/search/photos?query=${keyword}&page=${counter}&per_page=9`;
+			? `/photos?page=${counter}&per_page=12`
+			: `/search/photos?query=${keyword}&page=${counter}&per_page=12`;
 
 	axios.get(path).then(res => {
+		const data = keyword === "" ? res.data : res.data.results;
 		dispatch({
 			type: LOAD_MORE_IMAGES,
-			payload: keyword === "" ? res.data : res.data.results
+			payload: data
 		});
 	});
 };

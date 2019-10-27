@@ -1,26 +1,25 @@
-import React, { useState } from "react";
-import { useDispatch } from "react-redux";
+import React from "react";
+import { useDispatch, useSelector } from "react-redux";
 import { saveQuery, setQuery } from "../../store/actions/queryActions";
-import { searchImages } from '../../store/actions/imageActions';
+import { searchImages } from "../../store/actions/imageActions";
 import "./Search.scss";
 
 import Button from "../../components/Button";
 import Input from "../../components/Input";
 
 const Search = () => {
-    const [value, setValue] = useState("");
+	const value = useSelector(state => state.queries.item);
 	const dispatch = useDispatch();
 
-	const onClick = () => {
+	const dispatchSaveQuery = () => {
 		dispatch(saveQuery());
 	};
 
-	const onSearch = () => {
+	const dispatchSearchImages = () => {
 		dispatch(searchImages(value));
-	}
+	};
 
-	const onChange = e => {
-		setValue(e.target.value);
+	const dispatchSetQuery = e => {
 		dispatch(setQuery(e.target.value));
 	};
 
@@ -31,14 +30,18 @@ const Search = () => {
 					type='text'
 					name='query'
 					placeholder='Search Unsplash...'
-					setValue={onChange}
+					change={dispatchSetQuery}
 					value={value}
 				/>
 			</div>
 
 			<div className='button-wrapper'>
-				<Button type='button' label='Search' action={onSearch} />
-				<Button type='button' action={onClick} label='Save' />
+				<Button
+					type='button'
+					label='Search'
+					action={dispatchSearchImages}
+				/>
+				<Button type='button' action={dispatchSaveQuery} label='Save' />
 			</div>
 		</div>
 	);

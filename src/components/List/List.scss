@@ -1,17 +1,17 @@
 @import "../../scss/utils";
 
 .list {
-    width: 100% ;
-    border: solid 2px $medium;
-    margin-top: 0.5rem;
-    border-radius: 20px;
-    padding: 0rem 1.5rem;
-    background: white;
-    box-shadow: 0px 0px 3px 0px rgba(0,0,0,0.75);
-    h3 {
-        border-bottom: $medium solid 2px;
-        padding-bottom: 0.5rem;
-        margin-bottom: 0.5rem;
-        color: $medium;
-    }
+	width: 100%;
+	border: solid 2px $medium;
+	margin-top: 0.5rem;
+	border-radius: 20px;
+	padding: 0rem 1.5rem;
+	background: white;
+	box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, 0.75);
+	h3 {
+		border-bottom: $medium solid 2px;
+		padding-bottom: 0.5rem;
+		margin-bottom: 0.5rem;
+		color: $medium;
+	}
 }

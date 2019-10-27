@@ -14,6 +14,6 @@ const App = () => {
 			<Footer />
 		</Provider>
 	);
-}
+};
 
 export default App;

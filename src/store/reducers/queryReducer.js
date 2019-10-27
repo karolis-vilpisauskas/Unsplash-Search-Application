@@ -1,16 +1,21 @@
-import { SAVE_QUERY, SET_QUERY, DELETE_QUERY } from "../actions/types";
+import { SAVE_QUERY, SET_QUERY, DELETE_QUERY, TOGGLE_QUERIES } from "../actions/types";
+
+const storage = JSON.parse(sessionStorage.getItem("queries")) || [];
 
 const initialState = {
-	items: [],
-	item: ""
+	items: storage,
+	item: "",
+	active: false
 };
 
 export default (state = initialState, action) => {
 	switch (action.type) {
 		case SAVE_QUERY:
+			const computedItems = [...state.items, state.item];
+			sessionStorage.setItem("queries", JSON.stringify(computedItems));
 			return {
 				...state,
-				items: [...state.items, state.item]
+				items: computedItems
 			};
 		case SET_QUERY:
 			return {
@@ -18,12 +23,18 @@ export default (state = initialState, action) => {
 				item: action.payload
 			};
 		case DELETE_QUERY:
-			const itemDeleted = [...state.items];
-			itemDeleted.splice(action.payload, 1);
+			const splicedItems = [...state.items];
+			splicedItems.splice(action.payload, 1);
+			sessionStorage.setItem("queries", JSON.stringify(splicedItems));
 			return {
 				...state,
-				items: itemDeleted
+				items: splicedItems
 			};
+		case TOGGLE_QUERIES:
+			return {
+				...state,
+				active: !state.active
+			}
 		default:
 			return state;
 	}

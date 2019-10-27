@@ -7,9 +7,8 @@ import ListItem from "../ListItem";
 const List = () => {
 	const queries = useSelector(state => state.queries.items);
 
-
 	const queryItems = queries.map((query, i) => {
-		return <ListItem keyword={query} key={i} index={i}/>;
+		return <ListItem keyword={query} key={i} index={i} />;
 	});
 
 	return (

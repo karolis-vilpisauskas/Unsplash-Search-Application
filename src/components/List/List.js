@@ -14,7 +14,7 @@ const List = () => {
 	return (
 		<div className='list'>
 			<h3>Saved Searches</h3>
-			{queries.length !== 0 ? queryItems : <p>No saved queries</p>}
+			{queries.length !== 0 ? queryItems : <p>No saved searches</p>}
 		</div>
 	);
 };

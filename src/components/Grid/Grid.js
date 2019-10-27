@@ -14,6 +14,7 @@ const Grid = () => {
 	});
 
 	const page = useSelector(state => state.images.page);
+	const totalPages = useSelector(state => state.images.total_pages);
 	const images = useSelector(state => state.images.items);
 	const loader = useSelector(state => state.loader.active);
 	const query = useSelector(state => state.queries.item);
@@ -66,7 +67,7 @@ const Grid = () => {
 					<h2>Oops! No images have been found.</h2>
 				)}
 			</div>
-			{ifImages && images.length >= 9 ? (
+			{ifImages && images.length >= 12 && totalPages >= page ? (
 				<Button label='Load More' type='button' action={loadMore} />
 			) : (
 				""

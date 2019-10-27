@@ -16,7 +16,7 @@ const Header = () => {
 			<div className='container'>
 				<h1>Unsplash Image Search.</h1>
 				<div id='menuToggle' onClick={dispatchToggle}>
-					<input type='checkbox' checked={active} />
+					<input type='checkbox' defaultChecked={active} />
 					<span></span>
 					<span></span>
 					<span></span>

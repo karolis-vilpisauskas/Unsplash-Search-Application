@@ -6,6 +6,7 @@ import {
 
 const initialState = {
 	page: 2,
+	total_pages: 100,
 	items: [],
 	item: {}
 };
@@ -21,7 +22,8 @@ export default (state = initialState, action) => {
 		case SEARCH_IMAGES:
 			return {
 				...state,
-				items: action.payload,
+				items: action.payload.data,
+				total_pages: action.payload.total_pages,
 				page: 2
 			};
 		case LOAD_MORE_IMAGES:

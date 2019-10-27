@@ -38,6 +38,8 @@
 
 	&::before {
 		box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.1);
+		-moz-box-shadow: 0px 6px 10px 0px rgba(0, 0, 0, 0.75);
+		-webkit-box-shadow: 0px 6px 10px 0px rgba(0, 0, 0, 0.75);
 	}
 
 	&::after {

@@ -8,6 +8,8 @@
 	height: fit-content;
 	transition: all 0.3s ease-in-out;
 	box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, 0.75);
+	-moz-box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, 0.75);
+	-webkit-box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, 0.75);
 	border-radius: 20px;
 	.image {
 		width: 100%;
@@ -42,6 +44,8 @@
 
 	&:hover {
 		box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.75);
+		-moz-box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.75);
+		-webkit-box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.75);
 		.image {
 			.image-title {
 				opacity: 1;

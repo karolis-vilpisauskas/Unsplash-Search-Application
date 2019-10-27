@@ -8,6 +8,8 @@
 	padding: 0rem 1.5rem;
 	background: white;
 	box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, 0.75);
+	-moz-box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, 0.75);
+	-webkit-box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, 0.75);
 	h3 {
 		border-bottom: $medium solid 2px;
 		padding-bottom: 0.5rem;

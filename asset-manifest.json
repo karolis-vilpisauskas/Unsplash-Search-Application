@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/Unsplash-Search-Application/static/css/main.53a7d376.chunk.css",
+    "main.css": "/Unsplash-Search-Application/static/css/main.cbe845e5.chunk.css",
     "main.js": "/Unsplash-Search-Application/static/js/main.bdfedd6d.chunk.js",
     "main.js.map": "/Unsplash-Search-Application/static/js/main.bdfedd6d.chunk.js.map",
     "runtime-main.js": "/Unsplash-Search-Application/static/js/runtime-main.1e62bfda.js",
@@ -8,14 +8,14 @@
     "static/js/2.a6fee951.chunk.js": "/Unsplash-Search-Application/static/js/2.a6fee951.chunk.js",
     "static/js/2.a6fee951.chunk.js.map": "/Unsplash-Search-Application/static/js/2.a6fee951.chunk.js.map",
     "index.html": "/Unsplash-Search-Application/index.html",
-    "precache-manifest.8c3b9a0c1cedc1be0894c7ae49487bf8.js": "/Unsplash-Search-Application/precache-manifest.8c3b9a0c1cedc1be0894c7ae49487bf8.js",
+    "precache-manifest.a07e21ff814a2bad645d949d8393f309.js": "/Unsplash-Search-Application/precache-manifest.a07e21ff814a2bad645d949d8393f309.js",
     "service-worker.js": "/Unsplash-Search-Application/service-worker.js",
-    "static/css/main.53a7d376.chunk.css.map": "/Unsplash-Search-Application/static/css/main.53a7d376.chunk.css.map"
+    "static/css/main.cbe845e5.chunk.css.map": "/Unsplash-Search-Application/static/css/main.cbe845e5.chunk.css.map"
   },
   "entrypoints": [
     "static/js/runtime-main.1e62bfda.js",
     "static/js/2.a6fee951.chunk.js",
-    "static/css/main.53a7d376.chunk.css",
+    "static/css/main.cbe845e5.chunk.css",
     "static/js/main.bdfedd6d.chunk.js"
   ]
 }

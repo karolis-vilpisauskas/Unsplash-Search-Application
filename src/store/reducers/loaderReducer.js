@@ -1,7 +1,7 @@
 import { START_LOADER, STOP_LOADER } from "../actions/types";
 
 const initialState = {
-	active: false
+	active: true
 };
 
 export default (state = initialState, action) => {
